@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowRootActionExecution",
+      "Effect": "Allow",
+      "Action": [
+        "organizations:ExecuteRootAction"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowRootAccountManagement",
+      "Effect": "Allow",
+      "Action": [
+        "organizations:DescribeAccount",
+        "organizations:ListAccounts",
+        "organizations:ListRoots",
+        "organizations:ListOrganizationalUnitsForParent",
+        "organizations:ListAccountsForParent",
+        "organizations:ListDelegatedServicesForAccount"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowCloudTrailAccess",
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:LookupEvents"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
